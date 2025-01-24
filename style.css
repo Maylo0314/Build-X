@@ -11,6 +11,7 @@ body {
 .navbar-brand {
     color: #afe81f !important;
     font-weight: bold;
+    font-size: 30px;
 }
 
 .nav-link {
@@ -147,4 +148,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.row>*{
+    padding: 10px;
 }
