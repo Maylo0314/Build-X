@@ -154,6 +154,13 @@ footer a:hover {
     text-decoration: none;
 }
 
+
+.list{
+    padding: 30px;
+    background-color: #1534fe;
+    border-radius: 10px;
+}
+
 .row>*{
     padding: 10px !important;
 }
