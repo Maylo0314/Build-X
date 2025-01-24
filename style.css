@@ -150,6 +150,10 @@ footer a:hover {
     text-align: center;
 }
 
+.cardlink{
+    text-decoration: none;
+}
+
 .row>*{
-    padding: 10px;
+    padding: 10px !important;
 }
