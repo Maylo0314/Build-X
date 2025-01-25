@@ -22,8 +22,6 @@ body {
     color: #afe81f !important;
 }
 
-
-
 .dropdown-menu{
     background-color: black;
     border: none;
@@ -186,10 +184,21 @@ footer a:hover {
     padding: 0;
 }
 
+.over-ons-text{
+    font-size: 20px;
+}
+
 .row{
     justify-content: center;
 }
 
 .row>*{
     padding: 10px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .dropdown a{
+        padding-top: 0;
+        font-size: 20px;
+    }
 }
