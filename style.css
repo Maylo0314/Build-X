@@ -18,10 +18,23 @@ body {
     color: #e0e0e0 !important;
 }
 
-.nav-link.active, span {
+.nav-link.active, span, .dropdown-toggle.active {
     color: #afe81f !important;
 }
 
+
+
+.dropdown-menu{
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.dropdown a{
+    color: #e0e0e0;
+    text-decoration: none;
+    padding-top: 8px;
+}
 header {
     background-color: #090c11;
     color: #ffffff;
