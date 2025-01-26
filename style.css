@@ -111,6 +111,11 @@ footer a:hover {
     color: rgb(76, 74, 74);
 }
 
+.budget2{
+    background-color: #392D77;
+    border-radius: 10px;
+}
+
 .card .high h5{
     color: #c6c6c6;
 }
@@ -196,9 +201,15 @@ footer a:hover {
     padding: 10px !important;
 }
 
+.container-fluid {
+    padding: 0 15px; /* Reduce side padding for full-width effect */
+}
+
+
 @media only screen and (max-width: 600px) {
     .dropdown a{
         padding-top: 0;
         font-size: 20px;
     }
 }
+

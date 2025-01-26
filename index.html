@@ -57,26 +57,42 @@
     </header>
 
     <section id="examples" class="py-5">
-        <div class="container">
+        <div class="container-fluid">
             <h2 class="text-center mb-4">Voorbeelden van PC's</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="card h-100">
                         <div class="card-body budget">
                             <a class="cardlink" href="budget.html">
-                                <h3 class="card-title">Budget (€1000)</h3>
+                                <h3 class="card-title">Super-Budget (€800-€1000)</h3>
                                 <ul>
                                     <li>Processor: AMD Ryzen 5 7600X</li>
                                     <li>Grafische kaart: NVIDIA RTX 4060</li>
                                     <li>RAM: 16GB DDR5</li>
                                     <li>Opslag: 1TB NVMe SSD</li>
                                 </ul>
-                                <h5>Speel de niewste games in HD</h5>
+                                <h5>Speel de nieuwste games in HD</h5>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body budget2">
+                            <a class="cardlink" href="budget.html">
+                                <h3 class="card-title">Budget (€1000-€1200)</h3>
+                                <ul>
+                                    <li>Processor: AMD Ryzen 5 7600X</li>
+                                    <li>Grafische kaart: NVIDIA RTX 4060</li>
+                                    <li>RAM: 16GB DDR5</li>
+                                    <li>Opslag: 1TB NVMe SSD</li>
+                                </ul>
+                                <h5>Speel de nieuwste games in HD</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
                     <div class="card h-100">
                         <div class="card-body mid">
                             <a class="cardlink" href="mid-range.html">
@@ -87,12 +103,12 @@
                                     <li>RAM: 32GB DDR5</li>
                                     <li>Opslag: 2TB NVMe SSD</li>
                                 </ul>
-                                <h5>Speel de niewste games in QHD</h5>
+                                <h5>Speel de nieuwste games in QHD</h5>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="card h-100">
                         <div class="card-body high">
                             <a class="cardlink" href="high-end.html">
@@ -103,12 +119,41 @@
                                     <li>RAM: 32GB DDR5</li>
                                     <li>Opslag: 2TB NVMe SSD</li>
                                 </ul>
-                                <h5>Speel de niewste games in 4K</h5>
+                                <h5>Speel de nieuwste games in 4K</h5>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="vragenlijst" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Vind jouw ideale PC</h2>
+            <form id="pc-vragenlijst" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="gebruikstype" class="form-label">Hoe wil je je PC gebruiken?</label>
+                    <select class="form-select" id="gebruikstype" required>
+                        <option value="" disabled selected>Kies een optie</option>
+                        <option value="casual">Casual gamen (bijv. Minecraft, Fortnite)</option>
+                        <option value="hardcore">Hardcore gamen (bijv. Cyberpunk 2077, Elden Ring)</option>
+                        <option value="content">Content creatie (bijv. video-editing, streaming)</option>
+                    </select>
+                    <div class="invalid-feedback">Selecteer een gebruikstype.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="resolutie" class="form-label">Welke resolutie gebruik je?</label>
+                    <select class="form-select" id="resolutie" required>
+                        <option value="" disabled selected>Kies een optie</option>
+                        <option value="hd">FHD (1080p)</option>
+                        <option value="qhd">QHD (1440p)</option>
+                        <option value="4k">4K (2160p)</option>
+                    </select>
+                    <div class="invalid-feedback">Selecteer een resolutie.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Bekijk Aanbeveling</button>
+            </form>
         </div>
     </section>
 
@@ -129,5 +174,23 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (function () {
+            'use strict';
+            const form = document.querySelector('#pc-vragenlijst');
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    // Placeholder: Logica voor aanbeveling
+                    alert('Aanbeveling wordt berekend op basis van je keuzes.');
+                }
+                form.classList.add('was-validated');
+            });
+        })();
+    </script>
 </body>
 </html>
