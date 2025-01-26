@@ -30,6 +30,9 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
+                                    <a class="nav-link" href="super-budget.html">Super-Budget</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="budget.html">Budget</a>
                                 </li>
                                 <li class="nav-item">
@@ -128,40 +131,102 @@
         </div>
     </section>
 
-    <section id="vragenlijst" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Vind jouw ideale PC</h2>
-            <form id="pc-vragenlijst" class="needs-validation" novalidate>
-                <div class="mb-3">
-                    <label for="gebruikstype" class="form-label">Hoe wil je je PC gebruiken?</label>
-                    <select class="form-select" id="gebruikstype" required>
-                        <option value="" disabled selected>Kies een optie</option>
-                        <option value="casual">Casual gamen (bijv. Minecraft, Fortnite)</option>
-                        <option value="hardcore">Hardcore gamen (bijv. Cyberpunk 2077, Elden Ring)</option>
-                        <option value="content">Content creatie (bijv. video-editing, streaming)</option>
-                    </select>
-                    <div class="invalid-feedback">Selecteer een gebruikstype.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="resolutie" class="form-label">Welke resolutie gebruik je?</label>
-                    <select class="form-select" id="resolutie" required>
-                        <option value="" disabled selected>Kies een optie</option>
-                        <option value="hd">FHD (1080p)</option>
-                        <option value="qhd">QHD (1440p)</option>
-                        <option value="4k">4K (2160p)</option>
-                    </select>
-                    <div class="invalid-feedback">Selecteer een resolutie.</div>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Bekijk Aanbeveling</button>
-            </form>
-        </div>
-    </section>
-
     <div class="con">
         <div class="textContainer">
             <h3>Jouw eigen budget?</h3>
             <h3>Neem contact met ons op!</h3>
             <a href="mailto:info.build-x@gmail.com" class="btn btn-light btn-lg mt-3">Contact</a>
+        </div>
+    </div>
+
+    <section id="vragenlijst" class="py-5 vragenlijst">
+        <div class="container col-md-5">
+            <h2 class="text-center mb-4">Vind jouw Gaming PC</h2>
+            <form id="pc-vragenlijst" class="needs-validation" novalidate>
+                <!-- Gebruikstype -->
+                <div class="mb-3">
+                    <label class="form-label">Hoe wil je je PC gebruiken?</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gebruikstype" id="casual" value="casual" required>
+                            <label class="form-check-label" for="casual">
+                                Casual gamen (bijv. Minecraft, Fortnite, Valorant, League of Legends, Counter-Strike)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gebruikstype" id="hardcore" value="hardcore" required>
+                            <label class="form-check-label" for="hardcore">
+                                Hardcore gamen (bijv. Cyberpunk 2077, Elden Ring, Red Dead Redemption 2, GTA 5)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gebruikstype" id="content" value="content" required>
+                            <label class="form-check-label" for="content">
+                                Content creatie (bijv. video-editing, streaming, 3D modeling, Game Development)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gebruikstype" id="beide" value="beide" required>
+                            <label class="form-check-label" for="beide">
+                                Content creatie en gamen
+                            </label>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback">Selecteer een gebruikstype.</div>
+                </div>
+    
+                <!-- Resolutie -->
+                <div class="mb-3">
+                    <label class="form-label">Welke resolutie gebruik je?</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="resolutie" id="hd" value="hd" required>
+                            <label class="form-check-label" for="hd">
+                                FHD (1080p)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="resolutie" id="qhd" value="qhd" required>
+                            <label class="form-check-label" for="qhd">
+                                QHD (1440p)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="resolutie" id="4k" value="4k" required>
+                            <label class="form-check-label" for="4k">
+                                4K (2160p)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback">Selecteer een resolutie.</div>
+                </div>
+    
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-secondary">Bekijk Aanbeveling</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="aanbevelingModal" tabindex="-1" aria-labelledby="aanbevelingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aanbevelingModalLabel">Jouw Aanbeveling</h5>
+                </div>
+                <div class="modal-body">
+                    <p id="aanbevelingText"></p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="con">
+        <div class="textContainer">
+            <h3>Bekijk ons werk!</h3>
+            <a href="mid-range.html" class="btn btn-light btn-lg mt-3">Mid-Range</a>
+            <a href="high-end.html" class="btn btn-light btn-lg mt-3">High-end</a>
         </div>
     </div>
 
@@ -175,22 +240,60 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Form validation
-        (function () {
-            'use strict';
-            const form = document.querySelector('#pc-vragenlijst');
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    event.preventDefault();
-                    // Placeholder: Logica voor aanbeveling
-                    alert('Aanbeveling wordt berekend op basis van je keuzes.');
-                }
-                form.classList.add('was-validated');
-            });
-        })();
-    </script>
+
+    document.getElementById("pc-vragenlijst").addEventListener("submit", function (event) {
+    event.preventDefault(); // Voorkom standaard formulierverzending
+
+    // Ophalen van geselecteerde gebruikstype en resolutie
+    const gebruikstype = document.querySelector('input[name="gebruikstype"]:checked')?.value;
+    const resolutie = document.querySelector('input[name="resolutie"]:checked')?.value;
+
+    // Controleer of alles is geselecteerd
+    if (!gebruikstype || !resolutie) {
+        alert("Vul alle vragen in om een aanbeveling te krijgen.");
+        return;
+    }
+
+    // Aanbeveling logica
+    let aanbeveling = "";
+
+    if (gebruikstype === "casual" && resolutie === "hd") {
+        aanbeveling = "Super-Budget (€800-€1000) - Ideaal voor casual gamen op FHD!";
+    } else if (gebruikstype === "casual" && resolutie === "qhd") {
+        aanbeveling = "Budget (€1000-€1200) - Voor casual gamen op QHD!";
+    } else if (gebruikstype === "casual" && resolutie === "4k") {
+        aanbeveling = "Mid-Range (€1200-€1500) - Casual gamen in 4K met goede prestaties!";
+    } else if (gebruikstype === "hardcore" && resolutie === "hd") {
+        aanbeveling = "Budget (€1000-€1200) - Hardcore gamen met hoge framerates in FHD!";
+    } else if (gebruikstype === "hardcore" && resolutie === "qhd") {
+        aanbeveling = "Mid-Range (€1200-€1500) - Perfect voor hardcore gamen op QHD!";
+    } else if (gebruikstype === "hardcore" && resolutie === "4k") {
+        aanbeveling = "High-End (€1500+) - Voor de ultieme hardcore game-ervaring in 4K!";
+    } else if (gebruikstype === "content" && resolutie === "hd") {
+        aanbeveling = "Budget (€1000-€1200) - Content creatie op FHD met goede prestaties!";
+    } else if (gebruikstype === "content" && resolutie === "qhd") {
+        aanbeveling = "Mid-Range (€1200-€1500) - Voor content creatie op QHD!";
+    } else if (gebruikstype === "content" && resolutie === "4k") {
+        aanbeveling = "High-End (€1500+) - Ideaal voor content creatie in 4K!";
+    } else if (gebruikstype === "beide" && resolutie === "hd") {
+        aanbeveling = "Budget (€1000-€1200) - Voor gamen en content creatie in FHD!";
+    } else if (gebruikstype === "beide" && resolutie === "qhd") {
+        aanbeveling = "Mid-Range (€1200-€1500) - Voor gamen en content creatie in QHD!";
+    } else if (gebruikstype === "beide" && resolutie === "4k") {
+        aanbeveling = "High-End (€1500+) - Voor gamen en content creatie in 4K!";
+    } else {
+        aanbeveling = "Geen specifieke aanbeveling beschikbaar op basis van je selectie.";
+    }
+
+    // Aanbeveling in modal zetten
+    document.getElementById("aanbevelingText").textContent = aanbeveling;
+
+    // Modal tonen
+    const modal = new bootstrap.Modal(document.getElementById("aanbevelingModal"));
+    modal.show();
+    });
+
+
+</script>
 </body>
 </html>

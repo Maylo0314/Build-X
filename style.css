@@ -67,7 +67,7 @@ header .btn:hover, .con .btn:hover{
 }
 
 .card {
-    background-color: #151515;
+    background-color: #090c11;
     border: none;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -116,7 +116,7 @@ footer a:hover {
     border-radius: 10px;
 }
 
-.card .high h5{
+.card .high h5, .card .budget2 h5{
     color: #c6c6c6;
 }
 
@@ -141,7 +141,7 @@ footer a:hover {
     text-transform: uppercase;
 }
 
-.card .high h3{
+.card .high h3, .card .budget2 h3{
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -205,10 +205,32 @@ footer a:hover {
     padding: 0 15px; /* Reduce side padding for full-width effect */
 }
 
+.vragenlijst{
+    display: flex;
+    justify-content: center;
+    background-color: #090c11;
+}
+
+label{
+    padding-bottom: 5px;
+}
+
+.form-label{
+    font-size: 20px;
+    color: #afe81f;
+}
+
+.modal-content{
+    background-color: #090c11;
+}
+
+#aanbevelingText, #aanbevelingModalLabel{
+    color: white;
+}
 
 @media only screen and (max-width: 600px) {
     .dropdown a{
-        padding-top: 0;
+        padding: 10px 0px 10px 0;
         font-size: 20px;
     }
 }
