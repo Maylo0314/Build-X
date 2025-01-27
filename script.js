@@ -16,7 +16,7 @@ document.getElementById("pc-vragenlijst").addEventListener("submit", function (e
     let aanbeveling = "";
 
     if (gebruikstype === "casual" && resolutie === "hd") {
-        aanbeveling = "Super-Budget (€800-€1000) - Ideaal voor casual gamen op FHD!";
+        aanbeveling = "Super-Budget (€900-€1000) - Ideaal voor casual gamen op FHD!";
     } else if (gebruikstype === "casual" && resolutie === "qhd") {
         aanbeveling = "Budget (€1000-€1200) - Voor casual gamen op QHD!";
     } else if (gebruikstype === "casual" && resolutie === "4k") {
