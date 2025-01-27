@@ -1,3 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+  
+main {
+    flex: 1; 
+}
+
+
 body {
     background-color: black;
     color: #e0e0e0;
@@ -77,7 +101,7 @@ header .btn:hover, .con .btn:hover{
     transform: scale(1.05);
 }
 
-.card-title {
+.card-title, .service{
     color: #afe81f;
 }
 
@@ -227,6 +251,7 @@ label{
 #aanbevelingText, #aanbevelingModalLabel{
     color: white;
 }
+
 
 @media only screen and (max-width: 600px) {
     .dropdown a{
