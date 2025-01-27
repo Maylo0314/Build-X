@@ -65,9 +65,18 @@
                 <h2 class="text-center mb-4">Gebouwd door <span>Build-X</span></h2>
                 <div class="row">
                     <div class="col-md-5">
+                        <div class="w3-content w3-display-container slider">
+                            <img class="mySlides" src="images/PCm1.jpg" style="width:100%;">
+                            <img class="mySlides" src="images/PCm2.jpg" style="width:100%;">
+                            <img class="mySlides" src="images/PCm3.jpg" style="width:60%;">
+                            
+                            <div class="imgbuttons">
+                                <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+                                <button class="button-right" onclick="plusDivs(1)">&#10095;</button>
+                            </div>     
+                        </div>
                         <div style="background-color: #1534fe;" class="card list ">
                             <div class="card-body lists high">
-                                <img src="images/PCM.jpeg" alt="">
                                 <ul class="example">
                                     <li>Processor: Intel core i7-12700K</li>
                                     <li>Grafische kaart: NVIDIA RTX 4070 TI Super</li>
@@ -78,12 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6">
-                        <div class="card list">
-                            <div class="card-body  mid">
-                            </div>
-                        </div>
-                    </div> -->
+
                 </div>
             </div>
         </section>
@@ -98,5 +102,26 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+
+    </script>
 </body>
 </html>

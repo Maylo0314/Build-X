@@ -97,7 +97,7 @@ header .btn:hover, .con .btn:hover{
     transition: transform 0.3s ease;
 }
 
-.card:hover {
+.col-lg-3 .card:hover {
     transform: scale(1.05);
 }
 
@@ -252,6 +252,37 @@ label{
     color: white;
 }
 
+.slider img{
+    border-radius: 10px;
+    height: 530px;
+
+}
+
+.col-md-5 img{
+    margin: 0 auto;
+}
+
+.button-left{
+    background-color: #afe81f;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 48%
+}
+
+.button-right{
+    background-color: #afe81f;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 48%;
+}
+
+.imgbuttons{
+    display: flex;
+    padding: 5px 0px 5px 0;
+    justify-content: space-between;
+}
 
 @media only screen and (max-width: 600px) {
     .dropdown a{
