@@ -50,3 +50,8 @@ document.getElementById("pc-vragenlijst").addEventListener("submit", function (e
     const modal = new bootstrap.Modal(document.getElementById("aanbevelingModal"));
     modal.show();
 });
+
+if (window.location.pathname.endsWith('.html')) {
+    const newPath = window.location.pathname.replace('.html', '');
+    window.history.replaceState(null, '', newPath);
+}
