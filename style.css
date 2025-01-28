@@ -253,9 +253,8 @@ label{
 }
 
 .slider img{
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     height: 530px;
-
 }
 
 .col-md-5 img{
@@ -266,28 +265,44 @@ label{
     background-color: #afe81f;
     border: none;
     border-radius: 5px;
-    height: 30px;
-    width: 48%
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 33.5%;
+    top: 65%;
 }
 
 .button-right{
     background-color: #afe81f;
     border: none;
     border-radius: 5px;
-    height: 30px;
-    width: 48%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 33.5%;
+    top: 65%;
 }
 
-.imgbuttons{
-    display: flex;
-    padding: 5px 0px 5px 0;
-    justify-content: space-between;
+.examplecard{
+    border-radius: 0 0 10px 10px;
 }
 
 @media only screen and (max-width: 600px) {
     .dropdown a{
         padding: 10px 0px 10px 0;
         font-size: 20px;
+    }
+
+    .slider img{
+        height: 405px;
+    }
+
+    .button-left{
+        left: 0%;   
+    }
+
+    .button-right{
+        right: 0%;   
     }
 }
 
