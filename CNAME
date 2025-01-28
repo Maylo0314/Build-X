@@ -1,8 +1,0 @@
-build-x.nl
-build-x.github.io
-
-$ dig build-x.nl +noall +answer -t A
-> build-x.nl    3600    IN A     185.199.108.153
-> build-x.nl    3600    IN A     185.199.109.153
-> build-x.nl    3600    IN A     185.199.110.153
-> build-x.nl    3600    IN A     185.199.111.153
