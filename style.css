@@ -264,23 +264,24 @@ label{
 .button-left{
     background-color: #afe81f;
     border: none;
-    border-radius: 5px;
     height: 40px;
-    width: 40px;
-    position: absolute;
-    left: 33.5%;
-    top: 65%;
+    width: 50%;
+    border-right: 1.5px solid #090c11;
+    font-size: 25px;
 }
 
 .button-right{
     background-color: #afe81f;
     border: none;
-    border-radius: 5px;
     height: 40px;
-    width: 40px;
-    position: absolute;
-    right: 33.5%;
-    top: 65%;
+    width: 50%;
+    border-left: 1.5px solid #090c11;
+    font-size: 25px;
+}
+
+.imgbuttons{
+    display: flex;
+    justify-content: space-between;
 }
 
 .examplecard{
