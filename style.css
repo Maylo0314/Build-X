@@ -288,6 +288,11 @@ label{
     border-radius: 0 0 10px 10px;
 }
 
+.insta{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 5px;
+}
 @media only screen and (max-width: 600px) {
     .dropdown a{
         padding: 10px 0px 10px 0;
