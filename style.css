@@ -288,6 +288,14 @@ label{
     border-radius: 0 0 10px 10px;
 }
 
+.pre .container{
+    display: flex;
+    justify-content: center ;
+}
+
+.pre .container .col-5{
+    padding-right: 10px;
+}
 .insta{
     width: 30px;
     height: 30px;
