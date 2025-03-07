@@ -217,6 +217,10 @@ footer a:hover {
     font-size: 20px;
 }
 
+.waarom{
+    font-size: 20px;
+}
+
 .row{
     justify-content: center;
 }
@@ -296,11 +300,52 @@ label{
 .pre .container .col-5{
     padding-right: 10px;
 }
+
 .insta{
     width: 30px;
     height: 30px;
     margin: 0 5px 0 5px;
 }
+
+.display-none{
+    display: none;
+}
+
+.display{
+    display: block;
+}
+
+.dark-theme {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #090c11;
+    color: #c6c6c6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme th, .dark-theme td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #c6c6c6; 
+}
+
+.dark-theme th {
+    background-color: #0000; 
+    color: #afe81f; 
+}
+
+.dark-theme td {
+    background-color: #0000;
+    color: #fff;
+}
+
+.over-ons-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
 @media only screen and (max-width: 600px) {
     .dropdown a{
         padding: 10px 0px 10px 0;
@@ -328,5 +373,16 @@ label{
         width: 100%;
         padding: 0;
     }
-}
 
+    .waarom{
+        font-size: 17px;
+    }
+
+    .display-none{
+        display: block !important;
+    }
+
+    .display{
+        display: none !important;
+    }
+}
